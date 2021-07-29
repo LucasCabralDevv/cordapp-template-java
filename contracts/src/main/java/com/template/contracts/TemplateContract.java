@@ -29,7 +29,8 @@ public class TemplateContract implements Contract {
 
         if (commandData instanceof Commands.Send) {
             //Retrieve the output state of the transaction
-            TemplateState output = tx.outputsOfType(TemplateState.class).get(0);
+            TemplateState output =
+                    tx.outputsOfType(TemplateState.class).get(0);
 
             //Using Corda DSL function requireThat to replicate conditions-checks
             requireThat(require -> {
