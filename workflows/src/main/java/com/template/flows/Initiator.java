@@ -32,9 +32,7 @@ public class Initiator extends FlowLogic<SignedTransaction> {
     private Party receiver;
 
     //public constructor
-    public Initiator(Party sendTo){
-        this.receiver = sendTo;
-    }
+    public Initiator(Party sendTo){this.receiver = sendTo;}
 
     @Suspendable
     @Override
